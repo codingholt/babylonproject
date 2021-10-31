@@ -13,10 +13,13 @@ function createScene(){
     const scene = new BABYLON.Scene(engine);
 
     //create camara
-    const camera = new BABYLON.FreeCamera('camera', new BABYLON.Vector3(0,0,0));
+    const camera = new BABYLON.FreeCamera('camera', new BABYLON.Vector3(0,0, -5));
 
     //create light
     const light = new BABYLON.HemisphericLight('light', new BABYLON.Vector3(0,1,0), scene)
+
+    //create box
+    const box = BABYLON.MeshBuilder.CreateBox('box', {}, scene)
 
     return scene
 
